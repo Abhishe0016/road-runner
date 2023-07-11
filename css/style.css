@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../grass.jpg"); 
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 600px;
+  margin: 20px auto;
+  border: 1px solid #000;
+  background-color: #808080;
+}
+.side-image {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  background-repeat: repeat-y;
+  background-size: contain;
+  z-index: -1; 
+}
+
+.left-side-image {
+  left: -50px; 
+  background-image: url("../rock.png"); 
+}
+
+.right-side-image {
+  right: -50px; 
+  background-image: url("../rock.png"); 
+}
+
+#gameCanvas {
+  display: block;
+  margin: 0 auto;
+}
+
+#gameOverMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color:#000;
+  display: none;
+  background-color: aquamarine;
+}
+

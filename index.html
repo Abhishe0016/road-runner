@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Road Racer Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="side-image left-side-image"></div>
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    <audio id="collisionSound" src="crash.mp3"></audio>
+    <audio id="healthReduceSound" src="healthreduce.mp3"></audio>
+    <audio id="bulletFireSound" src="bulletfire.mp3"></audio>
+    <audio id="bulletCollisionSound" src="bulletcol.mp3"></audio>
+    <audio id="powerUpSound" src="powerup.mp3"></audio>
+    
+    <div id="gameOverMessage">Game Over! <br>Your Score: <span id="scoreDisplay"></span><br>Press Enter to Play Again</div>
+    <div class="side-image right-side-image"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
