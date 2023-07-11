@@ -103,9 +103,11 @@ function keyUpHandler(event) {
 }
 
 let requestId;
+let x = 0;
 function gameLoop() {
+  x++;
   update();
-  draw();
+  draw(x);
   if (!gameOver) {
     requestId = requestAnimationFrame(gameLoop);
   }
@@ -323,7 +325,7 @@ for (let i = 0; i < blockObstacles.length; i++) {
 }
 }
 
-function draw() {
+function draw(x) {
 
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -335,14 +337,16 @@ function draw() {
   //road lines
   ctx.strokeStyle = road.lineColor;
   ctx.lineWidth = road.lineWidth;
+
   ctx.setLineDash([10, 10]);
   ctx.beginPath();
-  ctx.moveTo(roadSectionWidth, road.y);
-  ctx.lineTo(roadSectionWidth, road.y + road.height);
+  ctx.moveTo(roadSectionWidth, road.y + x * 5 );
+  ctx.lineTo(roadSectionWidth, road.y + road.height + -1000000);
   ctx.stroke();
+
   ctx.beginPath();
-  ctx.moveTo(roadSectionWidth * 2, road.y);
-  ctx.lineTo(roadSectionWidth * 2, road.y + road.height);
+  ctx.moveTo(roadSectionWidth * 2, road.y + x * 5);
+  ctx.lineTo(roadSectionWidth * 2, road.y + road.height + -1000000);
   ctx.stroke();
 
   //car
